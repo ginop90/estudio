@@ -179,23 +179,67 @@
                 gap: 15px;
             }
         }
+
+        .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.logo-container {
+    flex: 1; /* Permite que el logo ocupe espacio */
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-container {
+    flex: 1; /* Permite que los enlaces ocupen espacio */
+    display: flex;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Espacio entre los enlaces */
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #25D366;
+}
+
+        
     </style>
 </head>
 <body>
     <header class="header">
-        <nav>
+    <nav class="navigation">
+        <div class="logo-container">
             <div class="logo">Parrilla, Herrera <strong>& Asociados</strong></div>
+        </div>
+        <div class="nav-links-container">
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#contacto">Contacto</a>
             </div>
-        </nav>
-        <div class="hero">
-            <h1>Compromiso Legal a Su Servicio</h1>
-            <p>Nuestro equipo combina experiencia y dedicación para ofrecer soluciones legales personalizadas que priorizan sus necesidades.</p>
         </div>
-    </header>
+    </nav>
+    <div class="hero">
+        <h1>Compromiso Legal a Su Servicio</h1>
+        <p>Nuestro equipo combina experiencia y dedicación para ofrecer soluciones legales personalizadas que priorizan sus necesidades.</p>
+    </div>
+</header>
+
 
     <section class="services" id="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
