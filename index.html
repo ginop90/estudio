@@ -10,11 +10,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
         }
 
         .header {
-            background: linear-gradient(to right, #6e5849, #d8c7b7); 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1600/900');
+            background-size: cover;
+            background-position: center;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -27,12 +29,12 @@
             padding: 20px 50px;
             background-color: rgba(0,0,0,0.5);
         }
-      
+
         .logo {
             font-size: 24px;
             font-weight: bold;
-        } 
-       
+        }
+
         .nav-links {
             display: flex;
             gap: 30px;
@@ -121,34 +123,65 @@
             transform: translateY(-5px);
         }
 
-        .contact {
-            padding: 50px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .office {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .office h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+        .service-card h3 {
+            font-size: 24px;
+            margin: 20px 0;
             color: #333;
         }
 
-        .whatsapp-button {
-            margin-top: 20px;
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact {
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #25D366;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            padding: 15px 30px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #128C7E;
         }
 
         footer {
@@ -179,67 +212,29 @@
                 gap: 15px;
             }
         }
-
-        .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.logo-container {
-    flex: 1; /* Permite que el logo ocupe espacio */
-    display: flex;
-    align-items: center;
-}
-
-.nav-links-container {
-    flex: 1; /* Permite que los enlaces ocupen espacio */
-    display: flex;
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px; /* Espacio entre los enlaces */
-    align-items: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #25D366;
-}
-
-        
     </style>
 </head>
 <body>
     <header class="header">
-    <nav class="navigation">
-        <div class="logo-container">
+        <nav>
             <div class="logo">Parrilla, Herrera <strong>& Asociados</strong></div>
-        </div>
-        <div class="nav-links-container">
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#contacto">Contacto</a>
             </div>
+        </nav>
+        <div class="hero">
+            <h1>Compromiso Legal a Su Servicio</h1>
+            <p>Nuestro equipo combina experiencia y dedicación para ofrecer soluciones legales personalizadas que priorizan sus necesidades.</p>
+            <a href="https://wa.me/+5492616682122" class="cta-button" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                WhatsApp
+            </a>
         </div>
-    </nav>
-    <div class="hero">
-        <h1>Compromiso Legal a Su Servicio</h1>
-        <p>Nuestro equipo combina experiencia y dedicación para ofrecer soluciones legales personalizadas que priorizan sus necesidades.</p>
-    </div>
-</header>
-
+    </header>
 
     <section class="services" id="servicios">
         <h2 class="section-title">Nuestros Servicios</h2>
@@ -269,26 +264,21 @@
 
     <section class="contact" id="contacto">
         <h2 class="section-title">Contáctenos</h2>
-        <div class="contact-info">
-            <div class="office">
-                <h3>Oficina 1</h3>
-                <p><strong>Dirección:</strong> Calle Principal 123, Ciudad X</p>
-                <p><strong>Teléfono:</strong> +54 9 1234 567890</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Nombre completo" required>
             </div>
-            <div class="office">
-                <h3>Oficina 2</h3>
-                <p><strong>Dirección:</strong> Avenida Secundaria 456, Ciudad Y</p>
-                <p><strong>Teléfono:</strong> +54 9 9876 543210</p>
+            <div class="form-group">
+                <input type="email" placeholder="Correo electrónico" required>
             </div>
-        </div>
-        <div class="whatsapp-button">
-            <a href="https://wa.me/+5492616682122" class="cta-button" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                WhatsApp
-            </a>
-        </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Teléfono">
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Descríbanos su caso" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Consulta</button>
+        </form>
     </section>
 
     <footer>
