@@ -228,11 +228,18 @@
 
         @media (max-width: 768px) {
             nav {
+                position: fixed; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+                top: 0; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+                left: 0; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
                 padding: 20px;
-                width: 100%;  /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+                width: 100%; 
+            }
+
+            .hero {
+               margin-top: 120px; /* Compensar el espacio del nav fijo */
             }
 
             .hero h1 {
@@ -244,12 +251,12 @@
             }
 
             .nav-links {
-                display: flex;                   /* Usamos flexbox para alinear los enlaces horizontalmente en pantallas grandes */
+                display: flex;
                 flex-direction: row;
                 justify-content: center;  
-                align-items: center;             /* Centramos los enlaces */
+                align-items: center;
                 gap: 15px;
-                margin-top: 20px;                 /* Añadimos espacio entre los enlaces y otros elementos */
+                margin-top: 20px;
                 width: 100%;  
             }
         }
