@@ -228,9 +228,6 @@
 
         @media (max-width: 768px) {
             nav {
-                position: fixed; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
-                top: 0; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
-                left: 0; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
@@ -238,8 +235,19 @@
                 width: 100%; 
             }
 
+            .logo {
+               position: fixed;
+               top: 0;
+               left: 0;
+               width: 100%;
+               padding: 15px;
+               background-color: rgba(0,0,0,0.8);
+               text-align: center;
+               z-index: 1000;
+            }
+
             .hero {
-               margin-top: 100px; /* Compensar el espacio del nav fijo ORGINAL 120px */
+               margin-top: 20px;
             }
 
             .hero h1 {
@@ -256,7 +264,7 @@
                 justify-content: center;  
                 align-items: center;
                 gap: 15px;
-                margin-top: 20px;
+                margin-top: 60px;
                 width: 100%;  
             }
         }
