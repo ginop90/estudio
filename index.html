@@ -265,7 +265,7 @@
             }
 
             .hero {
-               margin-top: 0px; /* orig 20, pero con 5 no cambia mucho */
+               margin-top: 10px;
             }
 
             .hero h1 {
@@ -301,6 +301,10 @@
         }
     </style>
 </head>
+<script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = currentYear;
+</script>
 <body>
     <header class="header">
         <nav>
@@ -383,7 +387,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Parrilla, Herrera & Asociados. Todos los derechos reservados.</p>
+        <p>&copy; <span id="currentYear"></span> Parrilla, Herrera & Asociados. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
