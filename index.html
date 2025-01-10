@@ -40,9 +40,22 @@
             background-color: rgba(0,0,0,0.5);
         }
 
-        .logo {
+        /*.logo {
             font-size: 23px;
             font-weight: bold;
+        }*/
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+         .logo-image {
+             height: 40px; /* Ajustaremos este valor según el tamaño que necesites */
+             width: auto;
         }
 
         .nav-links {
@@ -336,6 +349,10 @@
     <header class="header">
         <nav>
             <div class="logo">Parrilla, Herrera <strong>& Asociados</strong></div>
+            <div class="logo">
+                <img src="header-logo.png" alt="Logo Parrilla, Herrera & Asociados" class="logo-image">
+                <span>Parrilla, Herrera <strong>& Asociados</strong></span>
+           </div>
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
