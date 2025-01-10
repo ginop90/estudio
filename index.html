@@ -241,13 +241,18 @@
                left: 0;
                width: 100%;
                padding: 15px;
-               background-color: rgba(0,0,0,0.5);
+               /*background-color: rgba(0,0,0,0.5);*/
+               background: white; /* Fondo blanco base */
+               background: linear-gradient(to bottom, 
+                   rgba(255,255,255,0.9),  /* Capa blanca semi-transparente */
+                   rgba(255,255,255,0.7)   /* Se desvanece un poco hacia abajo */
+            );
                text-align: center;
                z-index: 1000;
             }
 
             .hero {
-               margin-top: 20px;
+               margin-top: 10px; /* original 20px */
             }
 
             .hero h1 {
