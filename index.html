@@ -14,13 +14,10 @@
         }
 
         .header {
-            /*background: linear-gradient(to bottom, #6e5849, #d8c7b7);*/
-            /*background: linear-gradient(to bottom, #6e5849, #d8c7b7), url(header-background.jpg);*/
-            /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(header-background.jpg);*/
             background: linear-gradient(rgba(110, 88, 73, 0.6), rgba(216, 199, 183, 0.6)), url(main-background.jpg);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat; /* nuevo */ 
+            background-repeat: no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -40,11 +37,6 @@
             background-color: rgba(0,0,0,0.5);
         }
 
-        /*.logo {
-            font-size: 23px;
-            font-weight: bold;
-        }*/
-
         .logo {
             display: flex;
             align-items: center;
@@ -54,7 +46,7 @@
         }
 
          .logo-image {
-             height: 40px; /* Ajustaremos este valor según el tamaño que necesites */
+             height: 40px;
              width: auto;
         }
 
@@ -227,8 +219,6 @@
         }
         
         .contact-info {
-            /*display: flex;
-            flex-direction: column;*/
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
@@ -291,7 +281,7 @@
                 gap: 20px;
                 padding: 20px;
                 width: 100%; 
-                padding-top: 80px; /* Aumentamos el padding superior ORGI 80PX*/
+                padding-top: 80px;
             }
 
             .logo {
@@ -303,20 +293,20 @@
                background-color: rgba(0,0,0,0.5);
                text-align: center;
                z-index: 1000;
-               height: 60px; /* Altura fija para el logo */
+               height: 60px;
                display: flex;
                align-items: center;
                justify-content: center;
             }
 
             .logo span {
-                font-size: 20px; /* Ajusta el tamaño de la fuente aquí */
-                color: white; /* Opcional: asegura que el texto sea legible */
+                font-size: 20px;
+                color: white;
             }
 
             .hero {
-                margin-top: -45px; /* Ajustamos el margen superior del hero SUGIERE 60PX */
-                padding-top: 0px; /* Ajustamos A 0 TENIA 20PX */
+                margin-top: -45px;
+                padding-top: 0px;
             }
 
             .hero h1 {
@@ -340,8 +330,8 @@
                 flex-direction: row;
                 justify-content: center;  
                 align-items: center;
-                gap: 15px; /* Ajustamos a 20 TENIA 15PX */
-                margin-top: 0; /* Eliminamos el margin-top anterior ORIG 60PX */ 
+                gap: 15px;
+                margin-top: 0;
                 width: 100%;  
             }
 
@@ -358,10 +348,7 @@
         }
     </style>
 </head>
-<script>
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentYear").textContent = currentYear;
-</script>
+
 <body>
     <header class="header">
         <nav>
@@ -447,7 +434,12 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Parrilla, Herrera & Asociados. Todos los derechos reservados.</p>
+        <p>&copy; <span id="current-year"></span> Parrilla, Herrera & Asociados. Todos los derechos reservados.</p>
     </footer>
+    
+<script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = currentYear;
+</script>    
 </body>
 </html>
